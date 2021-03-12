@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Directing Template">
+    <meta name="keywords" content="Directing, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="./js/httpRequest.js"></script>
+    <script src="./js/aptdeal.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9bnzSMiEhocd4kDrbmqJvdQq76RH64QY&callback=initMap"></script>
+    
+    
+    
+    <title>SSAFY 행복한 집</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+</head>
+
+<body>
+<script>
+function initMap() {
+  var loc1 = { lat : 37.47326, lng : 126.85274};
+  var loc2 = { lat : 37.43956, lng : 126.88091};
+  var loc3 = { lat : 37.47634, lng : 126.86726};
+  var loc4 = { lat : 37.45910, lng : 126.86992};
+
+  
+  var map1 = new google.maps.Map(
+      document.getElementById('map1'), {zoom: 15, center:loc1 });
+  var marker1 = new google.maps.Marker({position: loc1, map: map1});
+  
+  var map2 = new google.maps.Map(
+	      document.getElementById('map2'), {zoom: 15, center: loc2});
+  var marker2 = new google.maps.Marker({position: loc2, map: map2});
+	  
+  var map3 = new google.maps.Map(
+	      document.getElementById('map3'), {zoom: 15, center: loc3});
+  var marker3 = new google.maps.Marker({position: loc3, map: map3});
+  
+  var map4 = new google.maps.Map(
+	      document.getElementById('map4'), {zoom: 15, center: loc4});
+  var marker4 = new google.maps.Marker({position: loc4, map: map4});
+  
+  google.maps.event.addDomListener(window, "load", initMap);
+}
+</script>
+
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2 col-md-2">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/Logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-10 col-md-10">
+                    <div class="header__nav">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li class="active"><a href="./index.html">Home</a></li>
+                                <li><a href="./about.html">사이트 소개</a></li>
+                                <li><a href="#">공지 사항</a></li>
+                                <li><a href="#">오늘의 뉴스</a></li>
+                                <li><a href="#">주변 탐방</a></li>
+                                <li><a href="#">주변 매물 보기</a></li>
+                                <li><a href="#">관심 지역 설정</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header__menu__right">
+                            <a href="#" class="primary-btn"><i class="fa fa-plus"></i>Sign In</a>
+                            <a href="#" class="login-btn"><i class="fa fa-user"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Hero Section Begin -->
+    <section class="hero set-bg"  style="padding:100px;"data-setbg="img/hero/hero-bg.jpg">
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Most Search Section Begin -->
+    <section class="most-search spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>동별 매물</h2>
+                        <p>가장 인기 있는 매물 리스트</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="most__search__tab">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-1" role="tab">
+                                    <span class="flaticon-039-fork"></span>
+                                    	광명동
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">
+                                    <span class="flaticon-030-kebab"></span>
+                                    	소하동
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab">
+                                    <span class="flaticon-032-food-truck"></span>
+                                    	철산동
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#tabs-4" role="tab">
+                                    <span class="flaticon-017-croissant"></span>
+                                    	하안동
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane" id="tabs-1" role="tabpanel">
+                            <div class="row" id="gwang">
+                         		<div id="map1" style="width: 80%; height: 300px; margin: auto;"></div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tabs-2" role="tabpanel">
+                        	<div class="row" id="soha">
+                        		<div id="map2" style="width: 80%; height: 300px; margin: auto;"></div>
+                        	</div>
+                        </div>
+                        <div class="tab-pane" id="tabs-3" role="tabpanel">
+                        	<div class="row" id="chulsan">
+                        		<div id="map3" style="width: 80%; height: 300px; margin: auto;"></div>
+                        	</div>
+                        </div>
+                        <div class="tab-pane" id="tabs-4" role="tabpanel">
+                        	<div class="row" id="haan">
+                        		<div id="map4" style="width: 80%; height: 300px; margin: auto;"></div>
+                        	</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Most Search Section End -->
+
+    <!-- Newslatter Section Begin -->
+    <section class="newslatter">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="newslatter__text">
+                        <h3>Subscribe Newsletter</h3>
+                        <p>Subscribe to our newsletter and don’t miss anything</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <form action="#" class="newslatter__form">
+                        <input type="text" placeholder="Your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Newslatter Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer__about">
+                        <div class="footer__about__logo">
+                            <a href="./index.html"><img src="img/footer-logo.png" alt=""></a>
+                        </div>
+                        <p>Challenging the way things have always been done can lead to creative new options that reward
+                            you.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 offset-lg-1 col-md-6">
+                    <div class="footer__address">
+                        <ul>
+                            <li>
+                                <span>Call Us:</span>
+                                <p>(+12) 345-678-910</p>
+                            </li>
+                            <li>
+                                <span>Email:</span>
+                                <p>info.colorlib@gmail .com</p>
+                            </li>
+                            <li>
+                                <span>Fax:</span>
+                                <p>(+12) 345-678-910</p>
+                            </li>
+                            <li>
+                                <span>Connect Us:</span>
+                                <div class="footer__social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-skype"></i></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1 col-md-6">
+                    <div class="footer__widget">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">How it work</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Sign In</a></li>
+                            <li><a href="#">How it Work</a></li>
+                            <li><a href="#">Advantages</a></li>
+                            <li><a href="#">Direo App</a></li>
+                            <li><a href="#">Packages</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer__copyright">
+                        <div class="footer__copyright__text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                        </div>
+                        <div class="footer__copyright__links">
+                            <a href="#">Terms</a>
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Cookie Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/jquery.barfiller.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
